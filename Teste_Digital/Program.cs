@@ -13,6 +13,7 @@ namespace Teste_Digital
     {
         public static void Main(string[] args)
         {
+            WeatherForecast propietiesCard = new WeatherForecast();
             LogicCard logic = new LogicCard();
 
             int[] arrayColletion = { 2, 3, 4 };
@@ -22,8 +23,12 @@ namespace Teste_Digital
             for (int i = 0; i < arrayColletion.Length; i++)
             {
                 Console.WriteLine(arrayColletion[i]); 
+
             }
-            Console.ReadLine();
+
+            string cvvNumber = arrayColletion[0].ToString() + arrayColletion[1].ToString() + arrayColletion[2].ToString();
+
+            propietiesCard.CVV = int.Parse(cvvNumber);
         
             logic.CardNumber("2231154121814026");
 
